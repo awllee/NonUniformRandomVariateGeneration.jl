@@ -1,9 +1,33 @@
 using NURVG
-@static if VERSION < v"0.7.0-DEV.2005"
-    using Base.Test
-else
-    using Test
+using Compat.Test
+import Compat.Random.srand
+import Compat.undef
+include("goodness_of_fit.jl")
+
+@testset "Binomial tests" begin
+  include("binomial_test.jl")
 end
 
-# write your own tests here
-@test 1 == 2
+@testset "Multinomial tests" begin
+  include("multinomial_test.jl")
+end
+
+@testset "Poisson tests" begin
+  include("poisson_test.jl")
+end
+
+@testset "Gamma tests" begin
+  include("gamma_test.jl")
+end
+
+@testset "Beta tests" begin
+  include("beta_test.jl")
+end
+
+@testset "Uniform tests" begin
+  include("uniform_test.jl")
+end
+
+@testset "Categorical tests" begin
+  include("categorical_test.jl")
+end
