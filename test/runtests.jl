@@ -1,4 +1,4 @@
-using NURVG
+using NonUniformRandomVariateGeneration
 using Compat.Test
 import Compat.Random.srand
 import Compat.undef

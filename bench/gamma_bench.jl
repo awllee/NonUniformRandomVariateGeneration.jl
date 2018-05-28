@@ -1,4 +1,4 @@
-using NURVG
+using NonUniformRandomVariateGeneration
 using Distributions
 
 function benchNative(α::Float64, β::Float64, N::Int64)

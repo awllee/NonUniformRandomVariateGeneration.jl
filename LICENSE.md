@@ -1,4 +1,4 @@
-The NURVG.jl package is licensed under the MIT "Expat" License:
+The NonUniformRandomVariateGeneration.jl package is licensed under the MIT "Expat" License:
 
 > Copyright (c) 2018: Anthony Lee.
 >

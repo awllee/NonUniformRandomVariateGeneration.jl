@@ -1,4 +1,4 @@
-using NURVG
+using NonUniformRandomVariateGeneration
 using Distributions
 import Compat.undef
 

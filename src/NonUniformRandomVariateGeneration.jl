@@ -1,4 +1,4 @@
-module NURVG
+module NonUniformRandomVariateGeneration
 
 include("binomial.jl")
 include("multinomial.jl")
