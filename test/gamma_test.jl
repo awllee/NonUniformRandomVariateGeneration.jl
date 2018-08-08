@@ -1,6 +1,6 @@
 import StatsFuns.gammacdf
 
-srand(12345)
+seed!(12345)
 
 function testGamma(α, β, low, high, h, N)
   function cdf(x::Float64)

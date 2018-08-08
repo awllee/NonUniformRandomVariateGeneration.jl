@@ -1,6 +1,6 @@
 import StatsFuns.betacdf
 
-srand(12345)
+seed!(12345)
 
 function testBeta(α, β, low, high, h, N)
   function cdf(x::Float64)

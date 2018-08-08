@@ -1,4 +1,4 @@
-srand(12345)
+seed!(12345)
 
 function testMultinomial(n::Int64, p::Vector{Float64})
   counts::Vector{Int64} = sampleMultinomial(n, p)

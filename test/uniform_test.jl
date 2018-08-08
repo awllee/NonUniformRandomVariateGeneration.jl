@@ -1,4 +1,4 @@
-srand(12345)
+seed!(12345)
 
 function testSortedUniforms(low, high, h, N)
   function cdf(x::Float64)

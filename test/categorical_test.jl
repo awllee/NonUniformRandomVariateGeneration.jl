@@ -1,4 +1,4 @@
-srand(12345)
+seed!(12345)
 
 function testCategorical1(n::Int64, p::Vector{Float64})
   vs::Vector{Int64} = sampleCategorical(n, p)

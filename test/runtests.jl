@@ -1,7 +1,13 @@
 using NonUniformRandomVariateGeneration
 using Compat.Test
-import Compat.Random.srand
 import Compat.undef
+
+if VERSION < v"0.7-"
+  seed! = srand
+else
+  import Random.seed!
+end
+
 include("goodness_of_fit.jl")
 
 @testset "Binomial tests" begin

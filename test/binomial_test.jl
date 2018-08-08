@@ -1,6 +1,6 @@
 import StatsFuns.binompdf
 
-srand(12345)
+seed!(12345)
 
 function testBinomial(n, p, low, high, N)
   function pmf(x::Int64)

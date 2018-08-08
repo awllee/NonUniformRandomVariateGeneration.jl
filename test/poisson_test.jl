@@ -1,6 +1,6 @@
 import StatsFuns.poispdf
 
-srand(12345)
+seed!(12345)
 
 function testPoisson(μ, low, high, N)
   function pmf(x::Int64)
