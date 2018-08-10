@@ -1,6 +1,6 @@
 using NonUniformRandomVariateGeneration
 using Distributions
-import Compat.undef
+using BenchmarkTools
 
 function benchNative(n::Int64, ps::Vector{Float64}, N::Int64)
   m::Vector{Int64} = zeros(Int64, length(ps))
@@ -26,8 +26,5 @@ end
 n = 100000
 ps = [0.5; 0.1; 0.25; 0.15]
 
-@time benchNative(n, ps, 1024*1024*8)
-@time benchDistributions(n, ps, 1024*1024*8)
-
-@time benchNative(n, ps, 1024*1024*8)
-@time benchDistributions(n, ps, 1024*1024*8)
+@btime benchNative(n, ps, 1024*1024*8)
+@btime benchDistributions(n, ps, 1024*1024*8)

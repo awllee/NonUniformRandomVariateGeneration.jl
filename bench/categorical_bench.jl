@@ -1,6 +1,8 @@
 using NonUniformRandomVariateGeneration
 using Distributions
-import Compat.undef
+using BenchmarkTools
+using Random
+using StatsBase
 
 function benchNative1(n::Int64, ps::Vector{Float64}, N::Int64)
   v::Vector{Int64} = Vector{Int64}(undef, n)
@@ -39,10 +41,6 @@ ps = exp.(randexp(m))
 ps ./= sum(ps)
 N = 1024
 
-@time benchNative1(n, ps, N)
-@time benchNative2(n, ps, N)
-@time benchDistributions(n, ps, N)
-
-@time benchNative1(n, ps, N)
-@time benchNative2(n, ps, N)
-@time benchDistributions(n, ps, N)
+@btime benchNative1(n, ps, N)
+@btime benchNative2(n, ps, N)
+@btime benchDistributions(n, ps, N)

@@ -19,8 +19,5 @@ function benchDistributions(α::Float64, β::Float64, N::Int64)
   return m / N
 end
 
-@time benchNative(1.5, 2.5, 1024*1024*8)
-@time benchDistributions(1.5, 2.5, 1024*1024*8)
-
-@time benchNative(1.5, 2.5, 1024*1024*8)
-@time benchDistributions(1.5, 2.5, 1024*1024*8)
+@btime benchNative(1.5, 2.5, 1024*1024*8)
+@btime benchDistributions(1.5, 2.5, 1024*1024*8)

@@ -1,5 +1,6 @@
 using NonUniformRandomVariateGeneration
 using Distributions
+using BenchmarkTools
 
 n = 100000
 p = 0.25
@@ -21,8 +22,5 @@ function benchDistributions(n::Int64, p::Float64, N::Int64)
   return m / N
 end
 
-@time benchNative(n, p, 1024*1024*8)
-@time benchDistributions(n, p, 1024*1024*8)
-
-@time benchNative(n, p, 1024*1024*8)
-@time benchDistributions(n, p, 1024*1024*8)
+@btime benchNative(n, p, 1024*1024*8)
+@btime benchDistributions(n, p, 1024*1024*8)

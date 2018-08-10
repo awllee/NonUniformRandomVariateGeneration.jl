@@ -1,12 +1,7 @@
 using NonUniformRandomVariateGeneration
-using Compat.Test
-import Compat.undef
+using Test
 
-if VERSION < v"0.7-"
-  seed! = srand
-else
-  import Random.seed!
-end
+import Random.seed!
 
 include("goodness_of_fit.jl")
 

@@ -1,6 +1,3 @@
-using Compat.Random
-import Compat.Random.GLOBAL_RNG
-
 # sample Binomial r.v. using inverse transform
 @inline function sampleInverseCDFBinom(n::Int64, p::Float64, rng::RNG) where
   RNG <: AbstractRNG

@@ -1,5 +1,6 @@
 using NonUniformRandomVariateGeneration
 using Distributions
+using BenchmarkTools
 
 function benchNative(α::Float64, β::Float64, N::Int64)
   m::Float64 = 0.0
@@ -18,11 +19,8 @@ function benchDistributions(α::Float64, β::Float64, N::Int64)
   return m / N
 end
 
-@time benchNative(0.1, 1.0, 1024*1024*8)
-@time benchDistributions(0.1, 1.0, 1024*1024*8)
+@btime benchNative(0.1, 1.0, 1024*1024*8)
+@btime benchDistributions(0.1, 1.0, 1024*1024*8)
 
-@time benchNative(0.1, 1.0, 1024*1024*8)
-@time benchDistributions(0.1, 1.0, 1024*1024*8)
-
-@time benchNative(15.0, 1.0, 1024*1024*8)
-@time benchDistributions(15.0, 1.0, 1024*1024*8)
+@btime benchNative(15.0, 1.0, 1024*1024*8)
+@btime benchDistributions(15.0, 1.0, 1024*1024*8)

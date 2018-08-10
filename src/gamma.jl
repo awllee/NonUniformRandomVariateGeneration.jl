@@ -1,5 +1,3 @@
-import Compat.Random
-
 ## This is an implementation of
 ## Marsaglia, G. and Tsang, W.W., 2000. A simple method for generating gamma
 ## variables. ACM Transactions on Mathematical Software (TOMS), 26(3)
@@ -25,6 +23,6 @@ import Compat.Random
 end
 
 @inline function sampleGamma(α::Float64, β::Float64,
-  rng::RNG = Random.GLOBAL_RNG) where RNG <: AbstractRNG
+  rng::RNG = GLOBAL_RNG) where RNG <: AbstractRNG
   return sampleGamma(α, rng) / β
 end

@@ -1,5 +1,8 @@
 module NonUniformRandomVariateGeneration
 
+using Random
+import Random.GLOBAL_RNG
+
 include("binomial.jl")
 include("multinomial.jl")
 include("poisson.jl")

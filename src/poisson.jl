@@ -1,5 +1,3 @@
-import Compat.Random
-
 # coefficients a_0, ..., a_9
 let
   pdTableI = [ -0.5000000002 ;
@@ -132,7 +130,7 @@ let
   ## alternative algorithms should be used for the case where many Poisson
   ## variates are required for the same μ
   global @inline function samplePoisson(μ::Float64,
-      rng::RNG = Random.GLOBAL_RNG) where RNG <: AbstractRNG
+      rng::RNG = GLOBAL_RNG) where RNG <: AbstractRNG
     if μ >= 10.0
       return caseA(μ, rng)
     else
