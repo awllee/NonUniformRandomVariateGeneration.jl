@@ -1,9 +1,9 @@
 # Non-Uniform Random Variate Generation
 
-[![Build Status](https://travis-ci.org/awllee/NonUniformRandomVariateGeneration.jl.svg?branch=master)](https://travis-ci.org/awllee/NonUniformRandomVariateGeneration.jl)
-[![Build status](https://ci.appveyor.com/api/projects/status/ve73suox2nrlqvu9?svg=true)](https://ci.appveyor.com/project/awllee/nonuniformrandomvariategeneration-jl)
-[![Coverage Status](https://coveralls.io/repos/github/awllee/NonUniformRandomVariateGeneration.jl/badge.svg?branch=master)](https://coveralls.io/github/awllee/NonUniformRandomVariateGeneration.jl?branch=master)
-[![codecov.io](http://codecov.io/github/awllee/NonUniformRandomVariateGeneration.jl/coverage.svg?branch=master)](http://codecov.io/github/awllee/NonUniformRandomVariateGeneration.jl?branch=master)
+<!-- badges: start -->
+[![CI](https://github.com/awllee/NonUniformRandomVariateGeneration.jl/workflows/CI/badge.svg)](https://github.com/awllee/NonUniformRandomVariateGeneration.jl/actions)
+[![codecov](https://codecov.io/gh/awllee/NonUniformRandomVariateGeneration.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/awllee/NonUniformRandomVariateGeneration.jl)
+<!-- badges: end -->
 
 This package provides some non-uniform random variate generation schemes. They  can use specified random number generators, and hence can be used in multi-threaded applications with different random number generators associated to each thread.
 
